@@ -4,44 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto agrinho</title>
+    <title>Meu Site - Estilo Agrinho</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="image.png" alt="Imagem">
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <h2>Agro<span>Futuro</span></h2>
+            </div>
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#producao">Produção</a></li>
+                    <li><a href="#meio-ambiente">Meio Ambiente</a></li>
+                    <li><a href="#futuro">O Futuro</a></li>
+                    <li><a href="#participe">Participe</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="toggle-theme" class="theme-btn">Inverter Cores 🌗</button>
+            </div>
         </div>
-        <h1 style="font-size: 70px;">Agro Forte, Futuro Sustentável</h1>
     </header>
-    <main class="principal">
-        <div>
-            <h2 style="font-size: 30px;">O equilíbrio perfeito entre a força da produção e a preservação do meio
-                ambiente 🚜</h2>
-            <p style="font-size: 20px;">O mundo enfrenta seu maior desafio: alimentar uma população em constante
-                crescimento sem esgotar os recursos do nosso planeta. A resposta para esse dilema não está em
-                escolher entre o campo e a natureza, mas em uni-los. Um agro forte é aquele que produz com
-                eficiência.
-                um futuro sustentável é aquele que garante a vida das próximas gerações. Bem-vindo à nova era da
-                agricultura brasileira.</p>
-        </div>
 
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>Agro Forte, Futuro Sustentável🌾</h1>
+                    <p class="subtitle">O equilíbrio perfeito entre a força da produção e a preservação do meio ambiente
+                        🌍</p>
+                    <a href="#participe" class="btn-main">[Botão de Ação]</a>
+                </div>
+                <div class="hero-image-placeholder">
+                    <span>[Espaço para Imagem Ilustrativa (Ex: Drone)]</span>
+                </div>
+            </div>
+        </section>
 
+        <section id="producao" class="content-section bg-light">
+            <div class="container">
+                <span class="section-tag">Produção</span>
+                <h2>Produzir Mais, Impactar Menos</h2>
+                <p class="section-subtitle">Como a tecnologia e a eficiência movem o campo sem avançar sobre as
+                    florestas.</p>
+                <div class="text-block">
+                    <p>A força do agro brasileiro não se mede mais pela quantidade de terra desmatada, mas pela
+                        inteligência aplicada em cada hectare. Através da agricultura de precisão, drones, sensores e
+                        inteligência artificial analisam o solo em tempo real, permitindo o uso exato de água e
+                        nutrientes, evitando desperdícios.</p>
+                </div>
+            </div>
+        </section>
 
-        <div>
-            <h2 style="font-size: 30px;">Produzir Mais, Impactar Menos 🌱</h2>
-            <h3>Como a tecnologia e a eficiência movem o campo sem avançar sobre as florestas.</h3>
-            <p>A força do agro brasileiro não se mede mais pela quantidade de terra desmatada, mas pela inteligência
-                aplicada em cada hectare. Através da agricultura de precisão, drones, sensores e inteligência
-                artificial analisam o solo em tempo real, permitindo o uso exato de água e nutrientes, evitando
-                desperdícios.</p>
-        </div>
+        <section id="meio-ambiente" class="content-section">
+            <div class="container split-container">
+                <div class="text-block">
+                    <span class="section-tag">Sustentabilidade</span>
+                    <h2>Guardiões da Biodiversidade ♻️👨‍🌾</h2>
+                    <p>O produtor rural como o primeiro defensor da natureza.</p>
+
+                    <ul class="features-list">
+                        <li><strong>[Tópico 1]:</strong> [Explicação rápida do primeiro ponto importante.]</li>
+                        <li><strong>[Tópico 2]:</strong> [Explicação rápida do segundo ponto importante.]</li>
+                        <li><strong>[Tópico 3]:</strong> [Explicação rápida do terceiro ponto importante.]</li>
+                    </ul>
+                </div>
+                <div class="hero-image-placeholder">
+                    <span>[Espaço para Imagem (Ex: Broto/Planta)]</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="futuro" class="content-section bg-light">
+            <div class="container">
+                <span class="section-tag">Tendências</span>
+                <h2>[Título da Seção O Futuro]</h2>
+                <p class="section-subtitle">[Subtítulo sobre as próximas gerações ou tecnologias futuras]</p>
+
+                <div class="text-block">
+                    <p>[Seu texto principal sobre o futuro do agro ou da tecnologia no campo aqui.]</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>💡 [Título do Destaque / Curiosidade]</h3>
+                    <p>[Insira aqui um fato curioso, uma dica importante ou um dado impactante para chamar a atenção do
+                        leitor.]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="participe" class="content-section cta-section">
+            <div class="container text-center">
+                <h2>[Título da Seção Participe]</h2>
+                <p>[Texto final incentivando a pessoa a fazer parte da mudança, estudar sobre o tema ou entrar em
+                    contato.]</p>
+                <button class="btn-main">[Botão: Fazer Parte / Cadastrar]</button>
+            </div>
+        </section>
     </main>
 
-    <footer>
-
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>© 2026 [Nome do Seu Projeto]. Desenvolvido com foco em sustentabilidade e acessibilidade.</p>
+            <div class="footer-tags">
+                <a href="#">#[SuaHashtag1]</a>
+                <a href="#">#[SuaHashtag2]</a>
+            </div>
+        </div>
     </footer>
+
 
 </body>
 
