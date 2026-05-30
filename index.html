@@ -22,7 +22,7 @@
                     <li><a href="#producao">Produção</a></li>
                     <li><a href="#meio-ambiente">Meio Ambiente</a></li>
                     <li><a href="#futuro">O Futuro</a></li>
-                    <li><a href="#participe">Participe</a></li>
+                    <li><a href="#interativo">Participe</a></li>
                 </ul>
             </nav>
 
@@ -39,10 +39,10 @@
                     <h1>Agro Forte, Futuro Sustentável🌾</h1>
                     <p class="subtitle">O equilíbrio perfeito entre a força da produção e a preservação do meio ambiente
                         🌍</p>
-                    <a href="#participe" class="btn-main">[Botão de Ação]</a>
+                   
                 </div>
                 <div class="hero-image-placeholder">
-                    <span>[Espaço para Imagem Ilustrativa (Ex: Drone)]</span>
+                    <span><img src="img1.png" alt=""></span>
                 </div>
             </div>
         </section>
@@ -67,12 +67,19 @@
                 <div class="text-block">
                     <span class="section-tag">Sustentabilidade</span>
                     <h2>Guardiões da Biodiversidade ♻️👨‍🌾</h2>
-                    <p>O produtor rural como o primeiro defensor da natureza.</p>
+                    <p>Não existe economia sem ecologia. O solo vivo e a água limpa são as ferramentas de trabalho do
+                        agricultor. Práticas modernas mostram que a preservação ambiental é aliada do lucro e da
+                        sobrevivência do planeta.</p>
+                    <p>Destaques de Práticas Sustentáveis:</p>
 
                     <ul class="features-list">
-                        <li><strong>[Tópico 1]:</strong> [Explicação rápida do primeiro ponto importante.]</li>
-                        <li><strong>[Tópico 2]:</strong> [Explicação rápida do segundo ponto importante.]</li>
-                        <li><strong>[Tópico 3]:</strong> [Explicação rápida do terceiro ponto importante.]</li>
+                        <li><strong>ILPF (Integração Lavoura-Pecuária-Floresta):</strong> Um sistema que une árvores,
+                            gado e plantações na mesma área, sequestrando carbono e recuperando pastagens degradadas.
+                        </li>
+                        <li><strong>Plantio Direto:</strong> Cultivar sobre a palha da colheita anterior, protegendo o
+                            solo contra a erosão e mantendo a umidade.</li>
+                        <li><strong>Preservação de APPs e Reservas Legais:</strong> Proteger as matas ciliares e as
+                            fontes de água que abastecem as cidades e o próprio campo</li>
                     </ul>
                 </div>
                 <div class="hero-image-placeholder">
@@ -84,40 +91,200 @@
         <section id="futuro" class="content-section bg-light">
             <div class="container">
                 <span class="section-tag">Tendências</span>
-                <h2>[Título da Seção O Futuro]</h2>
-                <p class="section-subtitle">[Subtítulo sobre as próximas gerações ou tecnologias futuras]</p>
+                <h2>A Ciência e o Jovem no Comando do Futuro 👨‍🌾🚜</h2>
+                <p class="section-subtitle">Onde a tradição do campo encontra a inovação da nova geração.</p>
 
                 <div class="text-block">
-                    <p>[Seu texto principal sobre o futuro do agro ou da tecnologia no campo aqui.]</p>
+                    <p>O futuro sustentável já começou. As escolas, os filhos dos agricultores e os centros de pesquisa
+                        (como a Embrapa) estão redesenhando a história do campo. A sustentabilidade deixou de ser um
+                        conceito abstrato e se tornou métrica: rastreabilidade de alimentos, créditos de carbono e
+                        energia limpa (solar e biomassa) movendo as fazendas.</p>
                 </div>
 
                 <div class="highlight-box">
-                    <h3>💡 [Título do Destaque / Curiosidade]</h3>
-                    <p>[Insira aqui um fato curioso, uma dica importante ou um dado impactante para chamar a atenção do
-                        leitor.]</p>
+                    <h3>💡 Você sabia?</h3>
+                    <p>Antigamente, para saber se uma plantação precisava de água ou estava doente, o agricultor
+                        precisava caminhar por hectares examinando folha por folha. Hoje, satélites no espaço e drones
+                        com câmeras termais conseguem "enxergar" o estresse de uma planta antes mesmo que o olho humano
+                        consiga notar qualquer mudança de cor nela. Isso economiza até 30% de água e defensivos,
+                        protegendo o solo e acelerando a colheita!</p>
                 </div>
             </div>
         </section>
 
-        <section id="participe" class="content-section cta-section">
-            <div class="container text-center">
-                <h2>[Título da Seção Participe]</h2>
-                <p>[Texto final incentivando a pessoa a fazer parte da mudança, estudar sobre o tema ou entrar em
-                    contato.]</p>
-                <button class="btn-main">[Botão: Fazer Parte / Cadastrar]</button>
-            </div>
-        </section>
-    </main>
+        <section id="interativo" class="secao-interativa"></section>
+    <div class="quiz-container">
+        
+        <div id="tela-inicial" class="card-quiz">
+            <h2>Você é um agro-sustentável? ♻️</h2>
+            <p>Teste seus conhecimentos sobre o Agro Sustentável e ganhe o seu <strong>Certificado Digital de Guardião do Futuro</strong>!</p>
+            <button class="btn-quiz" onclick="iniciarQuiz()">Iniciar Quiz</button>
+        </div>
 
-    <footer class="site-footer">
-        <div class="container footer-container">
-            <p>© 2026 [Nome do Seu Projeto]. Desenvolvido com foco em sustentabilidade e acessibilidade.</p>
-            <div class="footer-tags">
-                <a href="#">#[SuaHashtag1]</a>
-                <a href="#">#[SuaHashtag2]</a>
+        <div id="tela-perguntas" class="card-quiz oculto">
+            <div class="progresso">Pergunta <span id="num-atual">1</span> de 5</div>
+            <h3 id="texto-pergunta">Texto da Pergunta aqui?</h3>
+            <div id="alternativas-container"></div>
+            <button id="btn-proxima" class="btn-quiz oculto" onclick="proximaPergunta()">Próxima Pergunta</button>
+        </div>
+
+        <div id="tela-resultado" class="card-quiz oculto">
+            <h2>Fim do Jogo!</h2>
+            <p id="mensagem-resultado"></p>
+            
+            <div id="certificado" class="certificado-container oculto">
+                <div class="selo-certificado">🌱</div>
+                <h3>CERTIFICADO DE GUARDIÃO DO FUTURO</h3>
+                <p>Certificamos que o jogador demonstrou conhecimentos avançados em sustentabilidade no campo, provando estar preparado para liderar o equilíbrio entre a produção e o meio ambiente!</p>
+                <div class="assinatura">Projeto Agrinho 2026</div>
+            </div>
+
+            <button class="btn-quiz" onclick="reiniciarQuiz()">Jogar Novamente</button>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const perguntas = [
+        {
+            q: "O que é a Integração Lavoura-Pecuária-Floresta (ILPF)?",
+            opcoes: [
+                "Plantar tudo misturado sem nenhum controle.",
+                "Um sistema que une grãos, gado e árvores na mesma área para recuperar o solo.",
+                "Uma técnica para derrubar árvores e criar pastos."
+            ],
+            correta: 1
+        },
+        {
+            q: "Como os drones ajudam a economizar água e defensivos no campo?",
+            opcoes: [
+                "Eles regam toda a plantação voando bem alto.",
+                "Eles servem apenas para tirar fotos bonitas da fazenda.",
+                "Eles mapeiam as plantas de cima e mostram o local exato que precisa de cuidado."
+            ],
+            correta: 2
+        },
+        {
+            q: "Qual a vantagem do 'Plantio Direto' para o meio ambiente?",
+            opcoes: [
+                "Cultivar sobre a palha da colheita anterior, protegendo o solo contra a erosão.",
+                "Plantar as sementes o mais rápido possível para economizar tempo.",
+                "Usar tratores maiores para revirar a terra várias vezes."
+            ],
+            correta: 0
+        },
+        {
+            q: "O que são as APPs (Áreas de Preservação Permanente) nas fazendas?",
+            opcoes: [
+                "Áreas destinadas para construir novas estradas.",
+                "Matas ciliares e florestas perto de rios e nascentes que o produtor deve proteger.",
+                "Espaços usados apenas para guardar as máquinas agrícolas."
+            ],
+            correta: 1
+        },
+        {
+            q: "Por que a tecnologia é a maior aliada do futuro sustentável no agro?",
+            opcoes: [
+                "Porque substitui completamente o trabalho humano por robôs.",
+                "Porque permite produzir mais alimentos na mesma quantidade de terra, poupando a natureza.",
+                "Porque serve apenas para deixar o site do projeto mais bonito."
+            ],
+            correta: 1
+        }
+    ];
+
+    let perguntaAtual = 0;
+    let pontuacao = 0;
+    let respondeu = false;
+
+    function iniciarQuiz() {
+        document.getElementById('tela-inicial').classList.add('oculto');
+        document.getElementById('tela-perguntas').classList.remove('oculto');
+        carregarPergunta();
+    }
+
+    function carregarPergunta() {
+        respondeu = false;
+        document.getElementById('btn-proxima').classList.add('oculto');
+        
+        let p = perguntas[perguntaAtual];
+        document.getElementById('num-atual').innerText = perguntaAtual + 1;
+        document.getElementById('texto-pergunta').innerText = p.q;
+        
+        let container = document.getElementById('alternativas-container');
+        container.innerHTML = ''; 
+
+        p.opcoes.forEach((opcao, index) => {
+            let botao = document.createElement('button');
+            botao.className = 'opcao-btn';
+            botao.innerText = opcao;
+            botao.onclick = () => verificarResposta(index, botao);
+            container.appendChild(botao);
+        });
+    }
+
+    function verificarResposta(selecionada, botaoClicado) {
+        if (respondeu) return; 
+        respondeu = true;
+
+        let p = perguntas[perguntaAtual];
+        let botoes = document.querySelectorAll('.opcao-btn');
+
+        if (selecionada === p.correta) {
+            botaoClicado.classList.add('correta');
+            pontuacao++;
+        } else {
+            botaoClicado.classList.add('errada');
+            botoes[p.correta].classList.add('correta');
+        }
+
+        document.getElementById('btn-proxima').classList.remove('oculto');
+    }
+
+    function proximaPergunta() {
+        perguntaAtual++;
+        if (perguntaAtual < perguntas.length) {
+            carregarPergunta();
+        } else {
+            mostrarResultado();
+        }
+    }
+
+    function mostrarResultado() {
+        document.getElementById('tela-perguntas').classList.add('oculto');
+        document.getElementById('tela-resultado').classList.remove('oculto');
+        
+        let msg = document.getElementById('mensagem-resultado');
+        let cert = document.getElementById('certificado');
+
+        if (pontuacao >= 4) {
+            msg.innerHTML = `Parabéns! Você acertou <strong>${pontuacao} de 5</strong> perguntas.<br>Você conhece muito bem o agro sustentável!`;
+            cert.classList.remove('oculto'); 
+        } else {
+            msg.innerHTML = `Você acertou <strong>${pontuacao} de 5</strong> perguntas.<br>Que tal revisar os conteúdos do site e tentar de novo para garantir seu certificado?`;
+            cert.classList.add('oculto');
+        }
+    }
+
+    function reiniciarQuiz() {
+        perguntaAtual = 0;
+        pontuacao = 0;
+        document.getElementById('tela-resultado').classList.add('oculto');
+        document.getElementById('tela-inicial').classList.remove('oculto');
+    }
+</script>
+    
             </div>
         </div>
-    </footer>
+   <footer class="rodape-container">
+    <div class="conteudo-rodape">
+        <p class="frase-agrinho">"Cultivando conhecimento, colhendo um futuro sustentável."</p>
+        <p class="creditos">Projeto desenvolvido para o <strong>Concurso Agrinho 2026</strong></p>
+        <div class="linha-divisoria"></div>
+        <p class="direitos">© 2026 - Todos os direitos reservados.</p>
+    </div>
+</footer>
 
 
 </body>
